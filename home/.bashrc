@@ -113,5 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
